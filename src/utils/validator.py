@@ -7,10 +7,8 @@ def number_validator(number, number_type):
         else:
             return converted_value
     except ValueError as Error:
-        print ("Ocurrió un error, intenta de nuevo.")
+        print ("\nOcurrió un error, intenta de nuevo.")
         return validate_number(input("Ingresa el valor de nuevo: "), type_number)
-    except KeyboardInterrupt:
-        print("\nSaliendo del programa.")
 
 def option_validator(value):
     option = value.strip()
