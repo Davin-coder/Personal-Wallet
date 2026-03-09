@@ -11,3 +11,14 @@ def number_validator(number, number_type):
         return validate_number(input("Ingresa el valor de nuevo: "), type_number)
     except KeyboardInterrupt:
         print("\nSaliendo del programa.")
+
+def option_validator(value):
+    option = value.strip()
+    try:
+        if option in ["1", "2", "3", "4", "5"]:
+            return option
+        else:
+            return option_validator(input("Digite una opción válida (1-5): "))
+    except ValueError as error:
+        print ("\nOcurrió un error, intenta de nuevo.")
+        return option_validator(input("Digite nuevamente la opción: "))
