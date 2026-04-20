@@ -17,7 +17,7 @@ class BilleteraRepositorio:
         lista_de_transacciones = []
         
         for datos_transaccion in datos["transacciones"]:
-            transaccion = Transaccion.crear_desde_diccionario(datos_transaccion)
+            transaccion = Transaccion.extraer_desde_diccionario(datos_transaccion)
             lista_de_transacciones.append(transaccion)
         return lista_de_transacciones
     
